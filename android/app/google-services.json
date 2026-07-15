@@ -1,0 +1,87 @@
+{
+  "project_info": {
+    "project_number": "382727535083",
+    "firebase_url": "https://smart7bus-default-rtdb.firebaseio.com",
+    "project_id": "smart7bus",
+    "storage_bucket": "smart7bus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382727535083:android:d1eeeaac025ff6d18541ae",
+        "android_client_info": {
+          "package_name": "com.geobus.geoflota"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNVRJ8q6hLpCB2kZujUGdRwxS5RA-xVC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382727535083:android:4aa6d02ad6b3779e8541ae",
+        "android_client_info": {
+          "package_name": "com.vigitracklatam.chofer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNVRJ8q6hLpCB2kZujUGdRwxS5RA-xVC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382727535083:android:ef5f20e422391bc98541ae",
+        "android_client_info": {
+          "package_name": "com.vigitracklatam.propietario"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNVRJ8q6hLpCB2kZujUGdRwxS5RA-xVC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382727535083:android:8f3fa1240f916a2a8541ae",
+        "android_client_info": {
+          "package_name": "com.vigitracklatam.smart7bus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNVRJ8q6hLpCB2kZujUGdRwxS5RA-xVC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

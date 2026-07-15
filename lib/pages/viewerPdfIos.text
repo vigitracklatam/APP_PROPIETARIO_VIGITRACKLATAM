@@ -1,0 +1,77 @@
+import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
+import 'dart:io';
+
+class PdfViewIos extends StatefulWidget {
+  final String asset;
+  final bool isUrl;
+
+  PdfViewIos(this.asset, {this.isUrl = false});
+
+  @override
+  _PdfViewIosState createState() => _PdfViewIosState();
+}
+
+class _PdfViewIosState extends State<PdfViewIos> {
+  bool _isLoading = true;
+  //late PdfController _pdfController;
+
+  @override
+  void initState() {
+    super.initState();
+    loadDocument();
+  }
+
+  Future<void> loadDocument() async {
+    /*if (widget.isUrl) {
+      final localPath = await _downloadFile(widget.asset);
+      _pdfController = PdfController(
+        document: PdfDocument.openFile(localPath), // Aquí ya no se usa await
+      );
+    } else {
+      _pdfController = PdfController(
+        document:
+            PdfDocument.openAsset(widget.asset), // Aquí tampoco se usa await
+      );
+    }*/
+    setState(() => _isLoading = false);
+  }
+
+  Future<String> _downloadFile(String url) async {
+    final response = await Dio().get(
+      url,
+      options: Options(responseType: ResponseType.bytes),
+    );
+    final dir =
+        await Directory.systemTemp.createTemp(); // Usar un directorio temporal
+    final filePath = '${dir.path}/downloaded.pdf';
+    final file = File(filePath);
+    await file.writeAsBytes(response.data);
+    return filePath; // Retorna la ruta del archivo descargado
+  }
+
+  @override
+  void dispose() {
+    //_pdfController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(title: const Text('PDF Viewer')),
+        body: Stack(
+          children: [
+            /*if (_isLoading)
+              Center(child: CircularProgressIndicator())
+            else
+              PdfView(
+                controller: _pdfController,
+              ),*/
+          ],
+        ),
+      ),
+    );
+  }
+}
